@@ -1,5 +1,3 @@
-
-
 # ==========================================================
 # Script for segmenting a corpus into sentences using spaCy
 #
@@ -11,12 +9,8 @@
 #     - Segments the text into sentences using the Italian spaCy model
 #     - Removes any <seg> tags at the beginning of sentences
 # - Saves all numbered sentences (one per line, with index) to an output file
-# - Automatically downloads the resulting file (for use in Google Colab)
+# - The output file will be manually modified before of being used 
 # ==========================================================
-
-
-# Download and import the Italian spaCy model
-!python -m spacy download it_core_news_sm
 
 import spacy
 import re
@@ -84,9 +78,5 @@ output_file = "output_corpus_in_frasi.txt"
 testo = carica_testo(input_file)
 frasi = segmenta_blocchi(testo)
 salva_frasi_con_indice(frasi, output_file)
-
-# Download the segmented file
-from google.colab import files
-files.download("output_corpus_in_frasi.txt")
 
 # From here, we manually remove the recipes
