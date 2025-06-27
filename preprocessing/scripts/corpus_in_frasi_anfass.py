@@ -72,8 +72,8 @@ def salva_frasi_con_indice(frasi, output_path):
             f.write(f"{i}\t{frase}\n")
 
 
-input_file = "/content/corpus_anfass.txt"
-output_file = "corpus_in_frasi_anfass.txt"
+input_file = "data/corpora/corpus_anfass.txt"
+output_file = "data/output_preprocessing/corpus_in_frasi_anfass.txt"
 
 # Load the text, segment into sentences, and save
 testo = carica_testo(input_file)
