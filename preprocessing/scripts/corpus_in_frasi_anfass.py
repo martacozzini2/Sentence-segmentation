@@ -13,9 +13,6 @@
 # - Automatically downloads the resulting file (for use in Google Colab)
 # ==========================================================
 
-# Download and import the Italian spaCy model
-!python -m spacy download it_core_news_sm
-
 import spacy
 import re
 
@@ -82,7 +79,3 @@ output_file = "corpus_in_frasi_anfass.txt"
 testo = carica_testo(input_file)
 frasi = segmenta_blocchi(testo)
 salva_frasi_con_indice(frasi, output_file)
-
-# Download the segmented file
-from google.colab import files
-files.download("corpus_in_frasi_anfass.txt")
