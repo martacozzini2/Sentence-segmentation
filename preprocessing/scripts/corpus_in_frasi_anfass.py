@@ -73,7 +73,7 @@ def salva_frasi_con_indice(frasi, output_path):
 
 if __name__ == "__main__":
     input_file = "data/corpora/corpus_anfass.txt"
-    output_file = "data/output_preprocessing/corpus_in_frasi_anfass.txt"
+    output_file = "data/output_preprocessing/anfass/corpus_in_frasi_anfass.txt"
 
     # Load the text, segment into sentences, and save
     testo = carica_testo(input_file)
