@@ -71,12 +71,13 @@ def salva_frasi_con_indice(frasi, output_path):
             f.write(f"{i}\t{frase}\n")
 
 
-input_file = "/content/corpus_dueparole.txt"
-output_file = "output_corpus_in_frasi.txt"
+# Main block
+if __name__ == "__main__":
+    input_file = "data/corpora/corpus_dueparole.txt"
+    output_file = "data/output_preprocessing/output_corpus_in_frasi.txt"
 
-# Load the text, segment into sentences, and save
-testo = carica_testo(input_file)
-frasi = segmenta_blocchi(testo)
-salva_frasi_con_indice(frasi, output_file)
+    testo = carica_testo(input_file)
+    frasi = segmenta_blocchi(testo)
+    salva_frasi_con_indice(frasi, output_file)
 
 # From here, we manually remove the recipes
