@@ -71,11 +71,11 @@ def salva_frasi_con_indice(frasi, output_path):
         for i, frase in enumerate(frasi, 1):
             f.write(f"{i}\t{frase}\n")
 
+if __name__ == "__main__":
+    input_file = "data/corpora/corpus_anfass.txt"
+    output_file = "data/output_preprocessing/corpus_in_frasi_anfass.txt"
 
-input_file = "data/corpora/corpus_anfass.txt"
-output_file = "data/output_preprocessing/corpus_in_frasi_anfass.txt"
-
-# Load the text, segment into sentences, and save
-testo = carica_testo(input_file)
-frasi = segmenta_blocchi(testo)
-salva_frasi_con_indice(frasi, output_file)
+    # Load the text, segment into sentences, and save
+    testo = carica_testo(input_file)
+    frasi = segmenta_blocchi(testo)
+    salva_frasi_con_indice(frasi, output_file)
