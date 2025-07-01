@@ -74,7 +74,7 @@ def salva_frasi_con_indice(frasi, output_path):
 # Main block
 if __name__ == "__main__":
     input_file = "data/corpora/corpus_dueparole.txt"
-    output_file = "data/output_preprocessing/output_corpus_in_frasi.txt"
+    output_file = "data/output_preprocessing/dueparole/output_corpus_in_frasi.txt"
 
     testo = carica_testo(input_file)
     frasi = segmenta_blocchi(testo)
