@@ -3,9 +3,9 @@
 # The output file serves as a benchmark to compare the model's segmentation with the original corpus segmentation.
 
 
-input_file = "/content/corpus_in_frasi_anfass.txt"
+input_file = "data/output_preprocessing/anfass/corpus_in_frasi_anfass.txt"
 
-output_file = "/content/frasi_segmentate_per_evaluation.txt"
+output_file = "data/output_LLM/evaluation/frasi_segmentate_per_evaluation.txt"
 
 with open(input_file, "r", encoding="utf-8") as f_in, open(output_file, "w", encoding="utf-8") as f_out:
     for line in f_in:
@@ -23,10 +23,3 @@ with open(input_file, "r", encoding="utf-8") as f_in, open(output_file, "w", enc
             f_out.write(f"{numero}\t{segmenti[0]}\n")
             for seg in segmenti[1:]:
                 f_out.write(f"{seg}\n")
-
-
-from google.colab import files
-
-file_path= output_file
-
-files.download(file_path)
