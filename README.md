@@ -28,11 +28,11 @@ Evaluates the performance of the LLM and compare them with the performances of t
 
 
 **Running the notebooks on Google Colab**
-Mount your Google Drive in the notebook:
+The notebooks are prepared to be run on Google Colab with Google Drive mounted.
 
 ```python
 from google.colab import drive
-drive.mount('/content/drive')
+drive.mount('/content/drive') ```
 
 **Data files:** 
 Before running a notebook, upload the required input files (found in the data/ folder of this repo) into the /content directory of your Colab session.
@@ -49,11 +49,11 @@ The file output_corpus_no_ricette.txt was manually created from the file output_
 Final evaluation files: frasi_semplificate_gemma_2_9b_it_anfass2_tagliato.txt, /content/frasi_semplificate_gemma_2_9b_it_anfass1_tagliato.txt, frasi_segmentate_per_evaluation_tagliato.txt. These were filtered to exclude sentences modified by the LLM and used in the final evaluation.
 
 ##### Repository Structure
-**Notebooks/** – Google Colab notebooks for all steps.
+**Notebooks/** – Jupyter notebooks ready to run on Google Colab.
 
-**Scripts/** – Standalone Python scripts for all steps.
+**Scripts/** – Python scripts that can be run locally or on any Python environment.
 
-**Data/** – Input and output data files, including manual files.
+**Data/** – Input and output data files, including manual files. These files are used by both notebooks and scripts.
 
 
 ###### Requirements
