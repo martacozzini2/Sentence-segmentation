@@ -62,6 +62,43 @@ pip install -r requirements.txt
 python -m spacy download it_core_news_sm
 ```
 
+### Hugging Face Authentication
+
+One script and one notebook located in the LLM folder require access to Hugging Face models.
+To run them, you need to authenticate using a Hugging Face token.
+
+You can get your token from: https://huggingface.co/settings/tokens
+
+Create a .env file in your project root directory with the following content:
+
+env
+Copia
+Modifica
+HF_TOKEN=your_token_here
+
+Make sure to replace your_token_here with your actual Hugging Face token.
+
+The scripts use this environment variable to log in automatically.
+
+2. The code uses this token automatically via the huggingface_hub library:
+
+```python
+from dotenv import load_dotenv
+import os
+from huggingface_hub import login
+
+load_dotenv()  # Loads the token from the .env file
+hf_token = os.getenv("HF_TOKEN")
+login(token=hf_token)
+```
+
+Make sure the required packages are installed:
+
+```python
+pip install huggingface_hub python-dotenv
+```
+
+
 
 #### How to Run the Project
 
