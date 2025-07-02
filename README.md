@@ -27,7 +27,7 @@ drive.mount('/content/drive')
 ```
 
 **Data files:** 
-Before running a notebook, upload the required input files (found in the data/ folder of this repo) into the /content directory of your Colab session.
+Before running a notebook, upload the required input files (found in the `data/` folder of this repository) into the `/content` directory of your Colab session.
 This ensures the notebook can access the data correctly.
 
 **Manual Files** 
