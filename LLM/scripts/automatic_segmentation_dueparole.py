@@ -33,7 +33,7 @@ model = AutoModelForCausalLM.from_pretrained(
 
 # Define paths for input and output files
 input_path = "data/output_preprocessing/anfass/frasi.txt"
-output_path = "data/output_LLM/original_outputs/frasi_semplificate_gemma_2_9b_it_anfass.txt"
+output_path = "data/output_LLM/original_outputs/frasi_semplificate_gemma_2_9b_it_anfass1_or.txt"
 
 simplified_results = []
 
@@ -102,8 +102,8 @@ Risultato:"""
             print(f"Errore nella frase {entry['id']}: {e}")
             break
 
-input_path = "data/output_preprocessing_anfass_frasi.txt"
-output_path = "data/frasi_semplificate_gemma_2_9b_it_anfass2.txt"
+input_path = "data/output_preprocessing/anfass/frasi.txt"
+output_path = "data/output_LLM/original_outputs/frasi_semplificate_gemma_2_9b_it_anfass2_or.txt"
 
 simplified_results = []
 
