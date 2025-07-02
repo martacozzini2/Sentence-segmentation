@@ -7,7 +7,7 @@ The notebooks are ready to run on Google Colab with Google Drive mounted.
 
 The scripts can be run locally or in any Python environment with the required packages.
 
-##### Repository Structure
+### Repository Structure
 **Notebooks/** – Jupyter notebooks ready to run on Google Colab.
 
 **Scripts/** – Python scripts that can be run locally or on any Python environment.
