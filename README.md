@@ -38,7 +38,7 @@ The file output_corpus_no_ricette.txt was manually created from the file `output
 
 - `corpus_in_frasi_anfass_tagliato_perdecision.txt`: Derived corpus excluding sentences modified by the LLM model, to ensure fair evaluation comparability. This txt was manually created from the file 
 
-Final evaluation files: `frasi_semplificate_gemma_2_9b_it_anfass2_tagliato.txt`, `/content/frasi_semplificate_gemma_2_9b_it_anfass1_tagliato.txt`, `frasi_segmentate_per_evaluation_tagliato.txt`. 
+Final evaluation files: `frasi_semplificate_gemma_2_9b_it_anfass2_tagliato.txt`, `frasi_semplificate_gemma_2_9b_it_anfass1_tagliato.txt`, `frasi_segmentate_per_evaluation_tagliato.txt`. 
 These were filtered to exclude sentences modified by the LLM and used in the final evaluation.
 
 
