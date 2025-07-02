@@ -32,7 +32,7 @@ model = AutoModelForCausalLM.from_pretrained(
 )
 
 # Define paths for input and output files
-input_path = "data/output_preprocessing_anfass_frasi.txt"
+input_path = "data/output_preprocessing/anfass/frasi.txt"
 output_path = "data/output_LLM/original_outputs/frasi_semplificate_gemma_2_9b_it_anfass.txt"
 
 simplified_results = []
