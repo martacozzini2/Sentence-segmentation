@@ -140,7 +140,7 @@ def main():
         print(f"{idx}\t{frase}")
 
     # Save selected sentences to a new file
-    with open("data/output_preprocessing/due_parole/frasi_test_set_due_parole.txt", "w", encoding="utf-8") as f_out:
+    with open("data/output_preprocessing/dueparole/frasi_test_set_due_parole.txt", "w", encoding="utf-8") as f_out:
         for idx, frase in frasi_selezionate.items():
             f_out.write(f"{idx}\t{frase}\n")
 
