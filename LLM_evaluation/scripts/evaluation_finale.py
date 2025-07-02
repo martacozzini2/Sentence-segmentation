@@ -14,8 +14,6 @@
 import re
 import spacy
 
-!python -m spacy download it_core_news_sm
-
 nlp = spacy.load("it_core_news_sm")
 
 def extract_tokens_with_sentence_index(text, debug=False):
