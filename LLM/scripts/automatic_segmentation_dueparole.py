@@ -1,4 +1,4 @@
-#Authentication with Hugging Face
+# Authentication with Hugging Face
 
 from dotenv import load_dotenv
 import os
@@ -13,14 +13,14 @@ import random
 import numpy as np
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-#Set the seed for reproducibility
+# Set the seed for reproducibility
 seed = 42
 
-torch.manual_seed(seed)               # For operations on CPU
-random.seed(seed)                     # For Python's built-in random module
-np.random.seed(seed)                  # For NumPy
-torch.cuda.manual_seed(seed)          # For CUDA operations on a single GPU
-torch.cuda.manual_seed_all(seed)      # For CUDA operations on all GPUs (multi-GPU setups)
+torch.manual_seed(seed)
+random.seed(seed)
+np.random.seed(seed)
+torch.cuda.manual_seed(seed)
+torch.cuda.manual_seed_all(seed)
 
 # Load the tokenizer and model from Hugging Face Hub
 
@@ -31,27 +31,13 @@ model = AutoModelForCausalLM.from_pretrained(
     torch_dtype=torch.bfloat16,
 )
 
-# Prepare input text – this is only for testing purposes and not part of the experiment
-input_text = "Write me a poem about Machine Learning."
-input_ids = tokenizer(input_text, return_tensors="pt").to("cpu")
-
-#Generate text using controlled sampling
-outputs = model.generate(
-    **input_ids,
-    max_new_tokens=150,
-    do_sample=True,
-    temperature=0.7,
-    top_p=0.9
-)
-
 # Define paths for input and output files
-input_path = "/content/drive/MyDrive/frasi_semplificate/frasi.txt"
-output_path= "/content/drive/MyDrive/frasi_semplificate/frasi_semplificate_gemma_2_9b_it_anfass.txt"
-
+input_path = "data/output_preprocessing_anfass_frasi.txt"
+output_path = "data/output_LLM/original_outputs/frasi_semplificate_gemma_2_9b_it_anfass.txt"
 
 simplified_results = []
 
-# Load sentences from input file, splitting by first whitespace or tab
+# Load sentences from input file
 frasi = []
 with open(input_path, "r", encoding="utf-8") as f:
     for line in f:
@@ -74,14 +60,12 @@ if os.path.exists(output_path):
             if len(parts) >= 1:
                 processed_ids.add(parts[0])
 
-# Open the output file in append mode to add new simplified sentences
 with open(output_path, "a", encoding="utf-8") as f_out:
     for entry in frasi:
         if entry["id"] in processed_ids:
             print(f"Già processata: {entry['id']}, salto.")
             continue
 
-# Construct the prompt to segment the sentences
         prompt = f"""Dividi la seguente frase in segmenti separati, inserendo un ritorno a capo dove le persone farebbero una pausa leggendo la frase ad alta voce.
 Ogni segmento di testo dovrebbe contenere tra le 5 e le 15 parole.
 Il contenuto della frase originale non deve essere alterato in nessun modo; pertanto non deve essere aggiunta nuova informazione di alcun tipo.
@@ -118,10 +102,8 @@ Risultato:"""
             print(f"Errore nella frase {entry['id']}: {e}")
             break
 
-
-input_path = "/content/drive/MyDrive/frasi_semplificate/frasi.txt"
-output_path= "/content/drive/MyDrive/frasi_semplificate/frasi_semplificate_gemma_2_9b_it_anfass2.txt"
-
+input_path = "data/output_preprocessing_anfass_frasi.txt"
+output_path = "data/frasi_semplificate_gemma_2_9b_it_anfass2.txt"
 
 simplified_results = []
 
