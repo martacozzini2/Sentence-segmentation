@@ -100,7 +100,7 @@ pip install huggingface_hub python-dotenv
 
 
 
-#### How to Run the Project
+# How to Run the Project
 
 Running the scripts (local or remote environment)
 To reproduce the full pipeline, run the scripts in the following order:
