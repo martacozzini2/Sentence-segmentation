@@ -71,10 +71,9 @@ You can get your token from: https://huggingface.co/settings/tokens
 
 Create a .env file in your project root directory with the following content:
 
-env
-Copia
-Modifica
+```bash
 HF_TOKEN=your_token_here
+```
 
 Make sure to replace your_token_here with your actual Hugging Face token.
 
