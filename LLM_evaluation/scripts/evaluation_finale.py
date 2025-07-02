@@ -129,19 +129,19 @@ def evaluate_by_sentence_2(predicted, reference):
 if __name__ == "__main__":
 
     #first prompt output
-    file_llm_1 = "frasi_semplificate_gemma_2_9b_it_anfass1_tagliato.txt"
+    file_llm_1 = "data/output_LLM/modified_outputs/frasi_semplificate_gemma_2_9b_it_anfass1_tagliato.txt"
     with open(file_llm_1, "r", encoding="utf-8") as f:
         testo = f.read()
     risultati_llm_3 = extract_tokens_with_sentence_index(testo, debug=False)
 
     #second prompt output
-    file_llm_2 = "frasi_semplificate_gemma_2_9b_it_anfass2_tagliato.txt"
+    file_llm_2 = "data/output_LLM/modified_outputs/frasi_semplificate_gemma_2_9b_it_anfass2_tagliato.txt"
     with open(file_llm_2, "r", encoding="utf-8") as f:
         testo = f.read()
     risultati_llm = extract_tokens_with_sentence_index(testo, debug=False)
 
     #reference file
-    file_reference = "frasi_segmentate_per_evaluation_tagliato.txt"
+    file_reference = "data/output_LLM/evaluation/frasi_segmentate_per_evaluation_tagliato.txt"
     with open(file_reference, "r", encoding="utf-8") as f:
         testo = f.read()
     risultati_reference = extract_tokens_with_sentence_index(testo, debug=False)
