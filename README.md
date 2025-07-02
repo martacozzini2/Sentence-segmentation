@@ -17,7 +17,7 @@ The scripts can be run locally or in any Python environment with the required pa
 **Data** – Input and output data files, including manual files. These files are used by both notebooks and scripts.
 
 
-#### Running the notebooks on Google Colab
+# Running the notebooks on Google Colab
 
 The notebooks are prepared to be run on Google Colab with Google Drive mounted.
 
@@ -41,7 +41,7 @@ The file output_corpus_no_ricette.txt was manually created from the file output_
 Final evaluation files: frasi_semplificate_gemma_2_9b_it_anfass2_tagliato.txt, /content/frasi_semplificate_gemma_2_9b_it_anfass1_tagliato.txt, frasi_segmentate_per_evaluation_tagliato.txt. These were filtered to exclude sentences modified by the LLM and used in the final evaluation.
 
 
-##### Running the scripts locally
+## Running the scripts locally
 
 The Python scripts in this repository can be run in any Python environment.
 
@@ -63,7 +63,7 @@ python -m spacy download it_core_news_sm
 ```
 
 
-###### How to Run the Project
+#### How to Run the Project
 
 Running the scripts (local or remote environment)
 To reproduce the full pipeline, run the scripts in the following order:
