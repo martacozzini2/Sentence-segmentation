@@ -36,12 +36,12 @@ Several important files were created manually or semi-manually (i.e., with some 
 - `output_corpus_no_ricette.txt`: Cleaned version of the Due Parole corpus with recipe sections partially removed, used to build the training DataFrame.
 The recipes belonged to the "Vita in casa" section of the corpus, which contained many cooking texts. We decided to exclude parts of these recipes because, after splitting the Due Parole texts into sentences, we noticed that the spaCy sentencizer often failed in the "Che cosa serve" subsections, where ingredients were listed in bullet points.
 These passages were frequently segmented incorrectly, mainly due to the presence of bullet-point lists introduced by symbols like hyphens (“-”).
-The file `output_corpus_no_ricette.txt` was manually created from `output_corpus_in_frasi.txt`, which is the output of the script corpus_in_frasi_dueparole.py (located in the preprocessing/ folder).
-Finally, `output_corpus_no_ricette.txt` is used by the script dataframe_dueparole.py to build the DataFrame for training the Decision Tree.
+The file `output_corpus_no_ricette.txt` was manually created from `output_corpus_in_frasi.txt`, which is the output of the script `corpus_in_frasi_dueparole.py` (located in the preprocessing/ folder).
+Finally, `output_corpus_no_ricette.txt` is used by the script `dataframe_dueparole.py` to build the DataFrame for training the Decision Tree.
 
 - `corpus_in_frasi_anfass_tagliato_perdecision.txt`: Derived corpus excluding sentences modified by the LLM model, to ensure fair evaluation comparability. This txt was manually created from the file `corpus_in_frasi_anfass.txt`.
 
-- The files in the subfolder modified_outputs (inside the output_LLM folder) are manually created from the files in the subfolder original_outputs of the same folder.
+- The files in the subfolder `modified_outputs` (inside the `output_LLM folder`) are manually created from the files in the subfolder `original_outputs` of the same folder.
 They contain the original files with the sentences modified by the LLM removed.
 
 
