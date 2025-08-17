@@ -1,6 +1,6 @@
 # Sentence Segmentation Project
 
-This repository contains scripts and notebooks for sentence segmentation tasks, focusing on training and evaluating a Decision Tree classifier and comparing it with large language models (LLMs).
+This repository contains scripts and notebooks for sentence segmentation tasks, focusing on training and evaluating a decision tree classifier and comparing it with large language models (LLMs).
 
 ## Overview
 
