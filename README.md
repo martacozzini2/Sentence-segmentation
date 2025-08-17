@@ -114,13 +114,13 @@ They prepare and clean the corpus files, by dividing the two corpora in sentence
 
 2. **Decision Tree scripts**
 These scripts are stored in the 'decision_tree' folder.
-They train and evaluate a Decision Tree classifier on the 3 different preprocessed DataFrame, prepared with the scripts of the 'preprocessing' folder.
-generate metrics and confusion matrices
+They train and evaluate a Decision Tree classifier on the three different preprocessed DataFrames, which are prepared with the scripts in the preprocessing folder.
+The scripts generate metrics and confusion matrices and evaluate the Decision Tree classifier on the Due Parole test set, the Anfass test set, and the Anfass reduced test set, with the outputs modified by the LLM removed, in order to make the results comparable with those of the LLM.
 
-3. **LLM script**
+3. **LLM scripts**
 Perform the task of sentence segmentation using an LLM, the model Gemma 9 2b it tested on 2 different prompts.
 
 4. **LLM evaluation scripts**
-Evaluates the performance of the LLM and compare them with the performances of the Decision Tree Classifier.
+Evaluates the performance of the LLM tested on the Anfass test set. 
 
 
