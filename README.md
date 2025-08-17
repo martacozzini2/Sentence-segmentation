@@ -41,7 +41,7 @@ Finally, `output_corpus_no_ricette.txt` is used by the script `dataframe_dueparo
 
 - `corpus_in_frasi_anfass_tagliato_perdecision.txt`: Derived corpus excluding sentences modified by the LLM model, to ensure fair evaluation comparability. This txt was manually created from the file `corpus_in_frasi_anfass.txt`.
 
-- The files in the subfolder `modified_outputs` (inside the `output_LLM folder`) are manually created from the files in the subfolder `original_outputs` of the same folder.
+- The files in the subfolder `modified_outputs` (inside the `output_LLM` folder) are manually created from the files in the subfolder `original_outputs` of the same folder.
 They contain the original files with the sentences modified by the LLM removed.
 
 
