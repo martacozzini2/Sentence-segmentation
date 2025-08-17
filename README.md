@@ -14,7 +14,7 @@ The scripts can be run locally or in any Python environment with the required pa
 
 **Scripts** – Python scripts that can be run locally or on any Python environment.
 
-**Data** – Input and output data files, including manual files. These files are used by both notebooks and scripts.
+**Data** – Input and output data files. These files are used by both notebooks and scripts.
 
 
 # Running the notebooks on Google Colab
