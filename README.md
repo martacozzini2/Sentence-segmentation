@@ -124,11 +124,3 @@ Perform the task of sentence segmentation using an LLM, the model Gemma 9 2b it 
 Evaluates the performance of the LLM and compare them with the performances of the Decision Tree Classifier.
 
 
-dubbi o cose importanti da ampliare
-su drive c'è file decision intero smote- quello crea anche dueparole test set però con i seg inclusi
-questo mi serve poi per creare il benchmark di due parole test
-vedi come includere quel codice in questo repository
-inoltre nb che notebook di benchmark anfass non racchiude <seg> tra le virgolette- vedi come gestire questa cosa
-su drive metto anche file benchmark dueparole così poi ampli
-
-
