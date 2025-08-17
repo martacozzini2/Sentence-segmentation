@@ -109,11 +109,11 @@ Running the scripts (local or remote environment)
 To reproduce the full pipeline, run the scripts in the following order:
 
 1. **Preprocessing script**
-These scripts are stored in the 'preprocessing' folder.
+These scripts are stored in the `preprocessing` folder.
 They prepare and clean the corpus files, by dividing the two corpora in sentences and generate the DataFrame used for training the decision tree models.
 
 2. **Decision Tree scripts**
-These scripts are stored in the 'decision_tree' folder.
+These scripts are stored in the `decision_tree` folder.
 They train and evaluate a Decision Tree classifier on the three different preprocessed DataFrames, which are prepared with the scripts in the preprocessing folder.
 The scripts generate metrics and confusion matrices and evaluate the Decision Tree classifier on the Due Parole test set, the Anfass test set, and the Anfass reduced test set, with the outputs modified by the LLM removed, in order to make the results comparable with those of the LLM.
 
